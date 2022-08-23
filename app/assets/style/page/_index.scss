@@ -1,0 +1,356 @@
+.firstView{
+
+    &_bgImg{
+        padding: 205px 0;
+        background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_home.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include RWD(768px){
+            padding: 85px 0;
+            background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_home_mobile.jpg);
+        }
+    }
+    //  文字漸層
+    h1{
+        background: linear-gradient(to bottom, $primary, $secondary, $secondary);
+        background-clip: text;
+        color: transparent;
+    }
+    .square{
+        width: 10px;
+        height: 10px;
+    }
+}
+.home{
+    &_point{
+        &_line{
+            width: 50px;
+            border-bottom: 3px solid $secondary;
+        }
+    }
+    &_title{
+        opacity: 0.7;
+        cursor: pointer;
+        border: 1px solid $gray-700;
+        &:hover{
+            opacity: 1;
+            border: 1px solid $secondary;
+            border-radius: 12px;
+            background-color: $dark;
+            span{
+                background: linear-gradient(to bottom, $primary, $secondary);
+                background-clip: text;
+                color: transparent;
+            }
+        }
+        @include RWD(576px){
+            span{
+                font-size: 50px;
+                background: linear-gradient(to bottom, $primary, $secondary);
+                background-clip: text;
+                color: transparent;
+            }
+            opacity: 1;
+            background-color: $gray-800;
+            border-radius: 12px;
+        }
+    }
+}
+
+.class{
+    &_point{
+        &_line{
+            width: 50px;
+            border-bottom: 3px solid $secondary;
+        }
+    }
+    @include RWD(567px){
+        &_number{
+            font-size: 48px;
+        }
+        
+    }
+    &-control{
+        border-radius: 12px;
+    }
+}
+.skill{
+    &_point{
+        &_line{
+            width: 50px;
+            border-bottom: 3px solid $secondary;
+        }
+    }
+    .swiper {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        display: inline-block;
+        width: auto !important;
+        height: 100%;
+        object-fit: cover;
+      }
+}
+
+.science{
+    &_point{
+        &_line{
+            width: 50px;
+            border-bottom: 3px solid $secondary
+        }
+    }
+    .card{
+        img{
+            width: 100px;
+        }
+        &-text{
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        &:hover{
+            border: 1px solid $secondary;
+        }
+    }
+
+    
+    &_link{
+        background: linear-gradient(to right, $primary, $secondary);
+        text-decoration: none;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+   
+}
+
+.color{
+    color:$success;
+}
+.info{
+    &_point{
+        z-index: 1;
+    }
+    &_line{
+        width: 70px;
+        border-bottom: 3px solid $light;
+        z-index:1;
+    }
+    &_control::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $gray-900;
+        opacity: 0.8;
+        z-index: 1;
+        transition: all 0.3s;
+    }
+    &_control{
+        img{
+            height: 635px;
+            object-fit: cover;
+            @include RWD(992px){
+                height: 350px;
+            }
+            @include RWD(768px){
+                height: 270px;
+            }
+        }
+    }
+    &_item:hover{
+        .info{
+            &_control::before{
+                opacity: 0;
+            }
+            &_line{
+                border-bottom:3px solid $secondary;
+            }
+            &_icon{
+                color:$secondary;
+            }
+        }
+        
+    }
+}
+
+.share{
+    &_point{
+        &_line{
+            width: 50px;
+            border-bottom: 3px solid $success;
+        }
+    }
+    .card{
+        cursor: pointer;
+    }
+    .square{
+        width: 32px;
+        height: 32px;
+        display: none;
+        &-topLeft {
+            border-top: 2px solid $success;
+            border-left: 2px solid $success;
+            border-top-left-radius: 10px;
+        }
+        &-topRight {
+        border-top: 2px solid $success;
+        border-right: 2px solid $success;
+        border-top-right-radius: 10px;
+        }
+        &-bottomLeft {
+        border-bottom: 2px solid $success;
+        border-left: 2px solid $success;
+        border-bottom-left-radius: 10px;
+        }
+        &-bottomRight {
+        border-bottom: 2px solid $success;
+        border-right: 2px solid $success;
+        border-bottom-right-radius: 10px;
+        }
+    }
+    .card:hover {
+        .square {
+            display: block;
+        }
+    }
+}
+
+.goal{
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_share.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 733px;
+    @media (max-width:991px) {
+        height: auto;
+    }
+    &_point{
+        &_line{
+            width: 50px;
+            border-bottom: 3px solid $secondary;
+        }
+    }
+}
+.swiper{
+    width: 100%;
+    height: 430px;
+    @media (max-width:991px) {
+        height: auto;
+    }
+    &-img{
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 60%;
+        height: 90%;
+        border-radius: 24px;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            border: 1px solid gray;
+            z-index: -1;
+            border-radius: 24px;
+            @media (max-width:991px) {
+                left: -5px;
+                top: 5px;
+              }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+        @media (max-width:991px) {
+            position: relative;
+            width: calc(100% - 5px);
+            height: 213px;
+            left: 5px;
+            margin-bottom: 40px;
+          }
+    }
+    .card{
+        width: 45%;
+        border-radius: 24px 24px 24px 0px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        &-img{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 32px;
+            transform: translateY(-50%);
+            @media (max-width:991px) {
+                width: 80px;
+                height: 80px;
+                right: 24px;
+                top: -30px;
+                bottom: auto;
+                transform: none;
+              }
+        }
+        @media (max-width:991px) {
+            position: relative;
+            width: 100%;
+            padding: 24px;
+            margin-bottom: 32px;
+          }
+    }
+
+    .swiper-button-next:after,.swiper-button-prev::after{
+        content: "";
+    }
+    .swiper-button-next, .swiper-button-prev {
+        position: unset;
+        width: 24px;
+        height: 24px;
+        margin-top: 0;
+    }
+
+    .swiper-pagination {
+        position: unset;
+        width: auto;
+        .swiper-pagination-bullet {
+          background-color: #62DB54;
+          opacity: initial;
+          &-active {
+            width: 16px;
+            border-radius: 100px;
+          }
+        }
+      }
+      .swiper-buttons {
+        bottom: 0;
+        left: 30%;
+        transform: translateX(-50%);
+        z-index: 10;
+        position: absolute;
+        @media (max-width: 991px) {
+          position: initial;
+          transform: none;
+        }
+      }
+}
+.join{
+    &_control{
+        border-radius: 24px;
+    }
+    &_icon{
+        font-size: 100px;
+    }
+}

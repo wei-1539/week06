@@ -4,16 +4,10 @@
  }
 }
 
-
-#collapseExample{
-   // position: absolute;
-   right:0; 
-   top: 100%;
-   @include RWD(576px){
-      position: absolute;
-      z-index: 15;
-   }
+.close{
+   top:30%;
+   right:2%;
 }
-#menu{
-   cursor: pointer;
+.navbarLine{
+   height: 2px;
 }
