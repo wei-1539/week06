@@ -15863,7 +15863,17 @@ a {
 }
 
 .navbar .lock {
-  color: #198754;
+  color: #62DB54;
+}
+
+.navbar-list {
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .navbar-list {
+    overflow: scroll;
+  }
 }
 
 .card {
