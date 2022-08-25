@@ -1,0 +1,48 @@
+.detail{
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    .card-title{
+        width: 75%;
+        @include RWD(576px){
+            width: 100%;
+        }
+    }
+}
+.price{
+    .square{
+        width: 10px;
+        height: 10px;
+    }
+    a{
+        .pay{
+            background: linear-gradient(to bottom, $primary,  $secondary);
+            
+        }
+        &:hover{
+            p{
+                color:$secondary;
+            }
+           .pay{ 
+                background: linear-gradient(to top, $primary,  $secondary);
+            }
+        }
+    }
+}
+.course{
+    .dot{
+        position: relative;
+        &::before{
+            content: "";
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            background-color: $secondary;
+            display: block;
+            transform: translateY(-50%);
+        }
+    }
+}
