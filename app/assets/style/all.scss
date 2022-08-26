@@ -5,7 +5,10 @@
 @import "./mixin/mixin";
 @import "./base/base";
 @import "./layout/header";
+@import "./utilities/progressBar";
 
 @import './page/index';
 @import "./page/class";
 @import "./page/detail";
+@import "./page/cash";
+@import "./page/order"

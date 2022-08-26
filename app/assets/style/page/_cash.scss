@@ -1,0 +1,6 @@
+.cash-link{
+    background: linear-gradient(to right ,$primary,$secondary);
+    &:hover{
+        background: linear-gradient(to left ,$primary,$secondary);
+    }
+}

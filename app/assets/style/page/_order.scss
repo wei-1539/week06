@@ -1,0 +1,44 @@
+.order {
+    .course {
+        &-img {
+            width: 100px;
+            height: 100px;
+            border: 3px solid $secondary;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right:-12px;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 0 12px 12px;
+            border-color: transparent transparent transparent $gray-700;
+            @include RWD(960px){
+                top: 100%;
+                right: 50%;
+                transform: translateX(50%);
+                border-width: 12px 12px 0px 12px;
+                border-color: $gray-700 transparent transparent transparent ;
+            }
+        }
+
+    }
+
+    &-left {
+        margin-right: -48px;
+        z-index: 1;
+        @include RWD(960px){
+            margin-right: 0;
+        }
+    }
+
+    &-right {
+        margin-left: -48px;
+        @include RWD(960px){
+            margin-left: 0;
+        }
+    }
+}

@@ -16,12 +16,15 @@
         }
     }
 }
-.card{
-    border-radius: 24px;
-  .title{
-    width: 60%;
-    @include RWD(576px){
-        width: 100%;
+.science{
+
+    .card{
+        border-radius: 24px;
+    .title{
+        width: 60%;
+        @include RWD(576px){
+            width: 100%;
+        }
+    }  
     }
-  }  
 }

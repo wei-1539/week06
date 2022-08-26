@@ -3,12 +3,16 @@
         width: 100px;
         height: 100px;
     }
-    .card-title{
-        width: 75%;
-        @include RWD(576px){
-            width: 100%;
+    .card{
+        border-radius: 24px;
+        &-title{
+            width: 75%;
+            @include RWD(576px){
+                width: 100%;
+            }
         }
     }
+    
 }
 .price{
     .square{

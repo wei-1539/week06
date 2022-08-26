@@ -33,3 +33,11 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// 日歷
+const elem = document.querySelector('input[name="inputDate"]');
+const datepicker = new Datepicker(elem, {
+  // ...options
+  language: 'zh-TW',
+  buttonClass: 'btn',
+}); 
