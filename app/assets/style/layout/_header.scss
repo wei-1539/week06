@@ -9,35 +9,57 @@
 //       background:linear-gradient(to right, $primary ,$secondary);
 //    }
 // }
-.nav-link{
- &:hover{
-    opacity: 0.8;
- }
+.logo {
+   background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/logo.svg);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 175px;
+   height: 100%;
+   text-indent: 101%;
+   white-space: nowrap;
+   overflow: hidden;
+
+   @include RWD(576px) {
+      width: 24px;
+      background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/logo2.svg);
+   }
 }
 
-.close{
-   top:30%;
-   right:2%;
+.nav-link {
+   &:hover {
+      opacity: 0.8;
+   }
 }
-.navbarLine{
+
+.close {
+   top: 30%;
+   right: 2%;
+}
+
+.navbarLine {
    height: 2px;
 }
 
-.submit{
-   background:linear-gradient(to right, $primary ,$secondary);
-   &:hover{
-      background:linear-gradient(to left, $primary ,$secondary);
+.submit {
+   background: linear-gradient(to right, $primary , $secondary);
+
+   &:hover {
+      background: linear-gradient(to left, $primary , $secondary);
    }
 }
+
 .login-icon {
    width: 24px;
    height: 24px;
    position: absolute;
    left: 32px;
 }
-.line-deco{
+
+.line-deco {
    position: relative;
-   &::before{
+
+   &::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -45,15 +67,16 @@
       width: 30%;
       height: 1px;
       left: 0%;
-  }
-  &::after{
-   content: "";
-   position: absolute;
-   top: 50%;
-   background: #C1C1C1;
-   width: 30%;
-   height: 1px;
-   right: 0%;
-}
-   
+   }
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      background: #C1C1C1;
+      width: 30%;
+      height: 1px;
+      right: 0%;
+   }
+
 }
