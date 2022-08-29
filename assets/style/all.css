@@ -16581,6 +16581,28 @@ a {
   right: 0%;
 }
 
+.navbar {
+  position: relative;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #09ACF5), color-stop(50%, #62DB54));
+  background-image: -o-linear-gradient(left, #09ACF5 50%, #62DB54 50%);
+  background-image: linear-gradient(90deg, #09ACF5 50%, #62DB54 50%);
+}
+
+@media (max-width: 576px) {
+  .navbar::after {
+    top: 70px;
+  }
+}
+
 .timeline {
   position: relative;
 }
