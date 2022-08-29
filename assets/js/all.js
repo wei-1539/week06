@@ -27,5 +27,12 @@ var swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   }
+}); // 日歷
+
+var elem = document.querySelector('input[name="inputDate"]');
+var datepicker = new Datepicker(elem, {
+  // ...options
+  language: 'zh-TW',
+  buttonClass: 'btn'
 });
 //# sourceMappingURL=all.js.map

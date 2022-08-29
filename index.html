@@ -14,17 +14,20 @@
     <link rel="stylesheet" href="./assets/style/all.css">
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- 日歷 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
   </head>
 
   <body>
     <header class="bg-gray-700">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light py-6">
-            <a class="navbar-brand" href="index.html">
-              <picture>
+          <a class="navbar-brand " href="index.html">
+              <h1 class="logo">logo</h1>
+              <!-- <picture>
                 <source media="(min-width: 720px)" srcset="./assets/images/week6-202207/logo.svg" width="175" >
                 <img src="./assets/images/week6-202207/logo2.svg" alt="" width="24"  class="d-inline-block align-text-top">
-              </picture>
+              </picture> -->
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="material-symbols-outlined text-secondary fs-1">drag_handle</span>
@@ -54,14 +57,36 @@
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content bg-gray-700">
+        <div class="modal-content bg-gray-700 border">
           <div class="modal-header  justify-content-center position-relative border-0">
             <h5 class="modal-title text-light " id="exampleModalLabel">登入</h5>
             <button type="button" class="btn-close btn-close-white position-absolute close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body ">
-            
-            
+          <div class="modal-body pb-12">
+            <div class="row justify-content-center">
+              <div class="col-md-8 ">
+                <form class="mb-14">
+                  <div class="mb-4">
+                    <label for="email" class="form-label">信箱</label>
+                    <input type="email"class="form-control" id="email" aria-describedby="emailHelp" placeholder="請輸入信箱">
+                  </div>
+                  <div class="mb-4">
+                    <label for="password" class="form-label">密碼</label>
+                    <input type="password"class="form-control" id="passwordl" aria-describedby="emailHelp" placeholder="請輸入密碼">
+                  </div>
+                  <button type="submit" class="btn submit text-light w-100  border-0">登入</button>
+                </form>
+                <p class="text-center line-deco mb-4 text-light">其他登入方式</p>
+                <a href="#" class="btn btn-outline-light w-100 mb-6 position-relative ">
+                  <img src="assets/images/week6-202207/icon_fb.svg" alt="icon" class="login-icon ">
+                  Facebook 登入
+                </a>
+                <a href="#" class="btn btn-outline-light w-100 position-relative ">
+                  <img src="assets/images/week6-202207/icon_google.svg" alt="icon" class="login-icon ">
+                    Google 登入
+                  </a>
+              </div>
+            </div>
           </div>
           
         </div>
@@ -123,36 +148,36 @@
       <h3 class="text-light  pb-4 mb-0 fw-bold">預期上課流程</h3>
       <div class="class_point_line "></div>
     </div>
-    <ul class="row ps-0">
+    <ol class="row ps-0">
       <li class="col-md-6 col-lg-3 list-unstyled mb-12 mb-lg-0">
-        <div class=" class-control text-light p-12 border border-light  position-relative">
+        <div class=" class-control text-light p-12 border border-light  position-relative h-100">
           <h2 class="h1 class_number fw-bold bg-gray-900 text-secondary position-absolute top-0 translate-middle-y">01</h2>
           <h3 class="mb-4 fs-4 fw-bold">預約</h3>
           <p class="mb-0  fs-7">線上預約指定課程與老師<br>由老師安排專屬課程</p>
         </div>
       </li>
       <li class="col-md-6 col-lg-3 list-unstyled mb-12 mb-lg-0">
-        <div class=" class-control text-light p-12 border border-light  position-relative">
+        <div class=" class-control text-light p-12 border border-light  position-relative h-100">
           <h2 class="h1 class_number fw-bold bg-gray-900 text-secondary position-absolute top-0 translate-middle-y">02</h2>
           <h3 class="mb-4 fs-4 fw-bold">付款</h3>
           <p class="mb-0 fs-7">支援各種支付方式<br>提供12期分期付款</p>
         </div>
       </li>
       <li class="col-md-6 col-lg-3 list-unstyled mb-12 mb-lg-0">
-        <div class="  class-control text-light p-12 border border-light  position-relative">
+        <div class="  class-control text-light p-12 border border-light  position-relative h-100">
           <h2 class="h1 class_number fw-bold bg-gray-900 text-secondary position-absolute top-0 translate-middle-y">03</h2>
           <h3 class="mb-4 fs-4 fw-bold">上課</h3>
           <p class="mb-0 fs-7">地點由您指定<br>密集性一對一教學</p>
         </div>
       </li>
-      <li class="col-md-6 col-lg-3 list-unstyled ">
-        <div class=" class-control text-light p-12 border border-light  position-relative">
+      <li class="col-md-6 col-lg-3 list-unstyled  ">
+        <div class=" class-control text-light p-12 border border-light  position-relative h-100">
           <h2 class="h1 class_number fw-bold bg-gray-900 text-secondary position-absolute top-0 translate-middle-y">04</h2>
           <h3 class="mb-4 fs-4 fw-bold">提供滿意度</h3>
           <p class="mb-0 fs-7">提供課程滿意度及回饋<br>讓我們持續成長與進步</p>
         </div>
       </li>
-    </ul>
+    </ol>
   </div>
 </div>
 
@@ -162,7 +187,7 @@
     <div class="skill_point_line "></div>
   </div>
  
-  <ul class="d-flex overflow-scroll ps-4 ps-md-6 ">
+  <ul class="d-flex overflow-auto ps-4 ps-md-6 ">
     <li class="list-unstyled  btn btn-outline-light p-4 py-md-6 px-md-8  fw-bold fs-6 fs-md-5 me-2 me-md-4">JavaScript</li>
     <li class="list-unstyled  btn btn-outline-light p-4 py-md-6 px-md-8  fw-bold fs-6 fs-md-5 me-2 me-md-4">HTML/CSS</li>
     <li class="list-unstyled  btn btn-outline-light p-4 py-md-6 px-md-8  fw-bold fs-6 fs-md-5 me-2 me-md-4">SQL</li>
@@ -188,8 +213,8 @@
       <h2 class="text-light fs-3 fw-bold pb-4 mb-0">熱門推薦課程</h2>
       <div class="science_point_line "></div>
     </div>
-    <div class="row mb-6 mb-md-12">
-      <div class="col-lg-3 col-md-6 mb-6 mb-lg-0">
+    <ul class="row mb-6 mb-md-12 list-unstyled">
+      <li class="col-lg-3 col-md-6 mb-6 mb-lg-0">
         <a href="#" class="card bg-gray-700 text-light pt-6 h-100">
           <img class="img-fluid rounded-circle mb-2 mx-auto" src="./assets/images/week6-202207/teacher01.jpg" alt="">
           <p class="mb-0 text-center">Belinda</p>
@@ -203,8 +228,8 @@
             <p class="price fs-2  fw-bold mb-0">NT$1600</p>
           </div>
         </a>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-6 mb-lg-0">
+      </li>
+      <li class="col-lg-3 col-md-6 mb-6 mb-lg-0">
         <a href="#" class="card bg-gray-700 text-light pt-6 h-100">
           <img class="img-fluid rounded-circle mb-2 mx-auto" src="./assets/images/week6-202207/teacher02.jpg" alt="">
           <p class="mb-0 text-center">Guava</p>
@@ -218,8 +243,8 @@
             <p class="price fs-2  fw-bold mb-0">NT$2200</p>
           </div>
         </a>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-6 mb-lg-0">
+      </li>
+      <li class="col-lg-3 col-md-6 mb-6 mb-lg-0">
         <a href="#" class="card bg-gray-700 text-light pt-6 h-100">
           <img class="img-fluid rounded-circle mb-2 mx-auto" src="./assets/images/week6-202207/teacher03.jpg" alt="">
           <p class="mb-0 text-center">Joe</p>
@@ -233,8 +258,8 @@
             <p class="price fs-2  fw-bold mb-0">NT$1800</p>
           </div>
         </a>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-6 mb-lg-0">
+      </li>
+      <li class="col-lg-3 col-md-6 mb-6 mb-lg-0">
         <a href="#" class="card bg-gray-700 text-light pt-6 h-100">
           <img class="img-fluid rounded-circle mb-2 mx-auto" src="./assets/images/week6-202207/teacher04.jpg" alt="">
           <p class="mb-0 text-center">Lina</p>
@@ -248,16 +273,16 @@
             <p class="price fs-2  fw-bold mb-0">NT$1100</p>
           </div>
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
     <a href="class.html" class="science_link rounded-1 text-light px-8 py-2 fs-5">所有課程列表</a>
   </div>
 </div>
 
 <div class="info">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 px-0 info_item ">
+    <ul class="row list-unstyled mb-0">
+      <li class="col-lg-3 col-md-6 px-0 info_item ">
         <div class="card border-0  info_control ">
           <img  src="./assets/images/week6-202207/info01.jpg" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-center  align-items-md-start align-items-center text-light px-12  p-lg-9">
@@ -267,8 +292,8 @@
             <p class="fs-7">除了可以瘋狂提問之外<br>還有機會一起完成專案</p>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 px-0 info_item">
+      </li>
+      <li class="col-lg-3 col-md-6 px-0 info_item">
         <div class="card border-0  info_control">
           <img  src="./assets/images/week6-202207/info02.jpg" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-center  align-items-md-start align-items-center text-light px-12  p-lg-9">
@@ -278,8 +303,8 @@
             <p class="fs-7 text-center text-md-start">進度制課程安排&個人化學習建議 有效管理你的學習動力</p>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 px-0 info_item">
+      </li>
+      <li class="col-lg-3 col-md-6 px-0 info_item">
         <div class="card border-0  info_control">
           <img  src="./assets/images/week6-202207/info03.jpg" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-center  align-items-md-start align-items-center text-light px-12  p-lg-9">
@@ -289,8 +314,8 @@
             <p class="fs-7 text-center text-md-start">針對學員狀況調整內容與步調<br>學習精準最有效</p>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 px-0 info_item">
+      </li>
+      <li class="col-lg-3 col-md-6 px-0 info_item">
         <div class="card border-0  info_control">
           <img  src="./assets/images/week6-202207/info04.jpg" alt="">
           <div class="card-img-overlay d-flex flex-column justify-content-center  align-items-md-start align-items-center text-light px-12  p-lg-9">
@@ -300,8 +325,8 @@
             <p class="fs-7 text-center text-md-start">針對目的進行客製化課程安排<br>快速的學以致用</p>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -311,8 +336,8 @@
       <h2 class="text-light  pb-4 mb-0">文章分享</h2>
       <div class="share_point_line "></div>
     </div>
-    <div class="row">
-      <div class="col-md-4 mb-6 mb-md-0">
+    <ul class="row list-unstyled">
+      <li class="col-md-4 mb-6 mb-md-0">
         <div class="card p-0 p-md-8 text-light bg-gray-900">
           <div class="square square-topLeft position-absolute top-0 start-0 translate-middle"></div>
           <div class="square square-topRight position-absolute top-0 start-100 translate-middle"></div>
@@ -323,8 +348,8 @@
           <p class="mb-4">轉職為前端的這條職業路上該如何發展？本篇為前端開發者提供學習地圖參考</p>
           <a href="#" class="text-secondary text-end mb-0 stretched-link">MORE</a>
         </div>
-      </div>
-      <div class="col-md-4 mb-6 mb-md-0">
+      </li>
+      <li class="col-md-4 mb-6 mb-md-0">
         <div class="card p-0 p-md-8 text-light bg-gray-900">
           <div class="square square-topLeft position-absolute top-0 start-0 translate-middle"></div>
           <div class="square square-topRight position-absolute top-0 start-100 translate-middle"></div>
@@ -335,8 +360,8 @@
           <p class="mb-4">軟體工程師領域廣闊，許多人仍然對此相關職務感到陌生，本篇就介紹主流的軟體工程師職務  </p>
           <a href="#" class="text-secondary text-end mb-0 stretched-link">MORE</a>
         </div>
-      </div>
-      <div class="col-md-4 ">
+      </li>
+      <li class="col-md-4 ">
         <div class="card p-0 p-md-8 text-light bg-gray-900">
           <div class="square square-topLeft position-absolute top-0 start-0 translate-middle"></div>
           <div class="square square-topRight position-absolute top-0 start-100 translate-middle"></div>
@@ -347,8 +372,8 @@
           <p class="mb-4">這篇文章規劃了適合「前端工程師」的學習地圖，讓新進的學生了解如何選擇課程</p>
           <a href="#" class="text-secondary text-end mb-0 stretched-link">MORE</a>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -431,6 +456,9 @@
     </footer>
     <!-- swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- 日歷 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
